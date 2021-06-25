@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background: #3a1c71; /* fallback for old browsers */
+  background: #cb356b; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #bd3f32,
+    #cb356b
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #bd3f32,
+    #cb356b
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+main {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: auto;
+}
+.btn {
+  padding: 1.2rem 2rem;
+  border: 0px;
+  border-radius: 20px;
+  background-color: #fff;
+  font-size: 1.3rem;
+  transition: all 0.2s ease-in-out;
+}
+.btn:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+#modal {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  margin: auto;
+  transition: all 0.5s ease-in-out;
+}
+
+.card {
+  background: #f3f3f3;
+  width: 100%;
+  position: relative;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 15px;
+}
+.card h2 {
+  margin-bottom: 2rem;
+}
+.card p {
+  line-height: 1.6rem;
+}
+.exit-btn {
+  border: none;
+  transform: scale(1.5);
+  transition: transform 0.2s ease-in-out;
+  position: relative;
+  top: -1rem;
+  left: 99%;
+}
+
+.exit-btn:hover {
+  cursor: pointer;
+  transform: scale(1.9);
+}
+.exit-btn:focus {
+  outline: none;
+}
+.overlay {
+  content: '';
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: gray;
+  visibility: visible;
+  opacity: 0.7;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
